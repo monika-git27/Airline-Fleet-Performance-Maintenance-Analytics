@@ -1,99 +1,147 @@
 # Fleet-Analytics-Maintenance-Planning
 ## Project Overview
 
-This project builds a complete fleet analytics system to help airlines monitor aircraft performance, identify high-risk assets, optimize maintenance planning, and improve operational decision-making.
+This project analyzes airline fleet data to assess fleet health, operational efficiency, maintenance risk, and retirement readiness.
+Using SQL for analysis and Power BI for visualization, the project converts raw aircraft data into structured, decision-ready insights to support maintenance prioritization and fleet planning.
 
-The project includes:
+## Objectives
 
-- A cleaned and validated aviation dataset
-- More than 30 SQL analyses for fleet health, efficiency, risk, and spare-parts demand
-- A Power BI dashboard that provides executive-level insights
-- Predictive indicators such as retirement forecast, spare-parts demand categories, and efficiency rankings
-## Key Insights & KPIs (Power BI Dashboard)
+- Validate and structure aircraft fleet data for accurate analysis
 
-### Top Summary KPIs
-- Total Aircraft: **50**
-- Active Aircraft: **22**
-- Average Fuel Burn per Seat: **25.55**
-- Average Fleet Age: **15.34 years**
-- High-Risk Aircraft: **18**
+- Analyze fleet composition, aircraft age, and performance efficiency
 
-### Dashboard Visuals
+- Identify high-risk and maintenance-intensive aircraft
+
+- Classify aircraft into maintenance and retirement risk categories
+
+- Present insights through an interactive Power BI dashboard
+
+## Dataset Description
+
+The dataset contains aircraft-level information including:
+
+- Airline
+
+- Aircraft model
+
+- Registration ID
+
+- Year built
+
+- Seating capacity
+
+- Engine type
+
+- Range (km)
+
+- Fuel burn (liters/hour)
+
+- Operational status (Active / Retired)
+
+## Tools & Technologies
+
+- SQL (PostgreSQL) – Data validation, aggregation, and analysis
+
+- Power BI – Interactive dashboards and KPI reporting
+
+## Data Quality & Validation (SQL)
+
+Before analysis, data quality checks were performed to ensure reliability:
+
+- Duplicate aircraft detection using Registration_ID
+
+- Missing value checks across key fields
+
+- Validation of build year ranges
+
+- Detection of invalid numeric values (seats, range, fuel burn)
+
+- Review of inconsistent status values
+
+## Analytical Approach
+1️. Fleet Health & Composition
+
+- Active vs Retired aircraft distribution
+
+- Fleet breakdown by airline and aircraft model
+
+2️. Aircraft Age & Lifecycle Analysis
+
+- Dynamic age calculation using build year
+
+- Classification into New, Mid-life, and Old aircraft
+
+3️. Performance & Efficiency Metrics
+
+- Fuel burn per seat for standardized efficiency comparison
+
+- Range efficiency (km per liter) to evaluate aircraft performance
+
+- Ranking of aircraft models by efficiency
+
+4️. Maintenance & Risk Assessment
+
+- Identification of 18 high-risk aircraft using age and fuel indicators
+
+- Classification into 3 spare-parts demand tiers (High / Medium / Low)
+
+- Engine-type distribution for maintenance planning
+
+5️. Retirement Readiness
+
+- Aircraft categorized into:
+
+- Immediate Retirement
+
+- Near Retirement
+
+- Active & Healthy
+
+## Power BI Dashboard
 ![Fleet Performance Dashboard](https://github.com/monika-git27/Fleet-Analytics-Maintenance-Planning/blob/main/Dashboard.png)
-- Fleet Count by Aircraft Model
-- Fuel Efficiency Ranking
-- Fleet Status (Active, Retired, Under Maintenance)
-- Spare Parts Demand Classification
-- Aircraft Age Distribution
-- Retirement Forecast (Immediate, Near, Healthy)
 
----
+The Power BI dashboard provides:
 
-## Data Cleaning and Quality Checks
+- Fleet KPIs (total aircraft, active fleet, average age)
 
-The project uses SQL to perform structured data validation, including:
+- Fuel efficiency rankings by aircraft model
 
-- Duplicate aircraft checks
-- Missing value identification
-- Invalid year and date detection
-- Fuel burn, seat count, and numeric validations
-- Verification of valid status categories
+- Age distribution and retirement readiness
 
-All SQL quality checks and analytics queries are included in the project SQL file.
+- Maintenance and spare-parts demand categories
 
----
+ Interactive filters allow users to analyze data by:
 
-## Exploratory Data Analysis (SQL)
+- Airline
 
-The SQL analysis includes:
+- Aircraft model
 
-- Fleet status breakdown
-- Aircraft model–wise age distribution
-- Fuel burn per seat analysis
-- Engine type analysis and reliability insights
-- Seating capacity comparison
-- Range efficiency calculations
+- Status
 
----
+- Age group
 
-## Business and Maintenance Analytics
+## Key Outcomes
 
-### Age-Based Aircraft Classification
+- Established a clear fleet health baseline using validated data
 
-Aircraft are categorized into age groups:
+- Identified 18 high-risk aircraft requiring closer maintenance review
 
-- New (0–9 years)
-- Mid-life (10–20 years)
-- Old (more than 20 years)
+- Standardized performance comparison across aircraft models
 
-### Spare Parts Demand Forecast
+- Enabled targeted maintenance planning using 3 demand tiers
 
-Demand categories are assigned using:
+- Delivered decision-ready insights through an interactive dashboard
 
-- Average aircraft age
-- Fuel burn per seat
-- Operational usage intensity
+## Business Value
 
-Categories include **High**, **Medium**, and **Low** demand.
+This analysis helps airline stakeholders:
 
-### Retirement Forecasting
+- Prioritize maintenance efforts
 
-Retirement decisions are analyzed using age thresholds:
+- Identify inefficient and aging aircraft
 
-- Immediate Retirement: Older than 25 years
-- Near Retirement: 20–25 years
-- Active / Healthy: Less than 20 years
+- Support fleet renewal and retirement planning
 
-### Engine Reliability Risk Model
+- Reduce reliance on manual analysis
 
-Aircraft engines are classified into **Low**, **Medium**, or **High** reliability risk levels based on age and condition metrics.
 
----
-
-## Skills and Tools Used
-
-- SQL (data validation, EDA, analytical modeling)
-- Power BI, Tableau (KPI visualization, trend dashboards, slicers, DAX expressions)
-- Data cleaning and preprocessing
-- Aviation fleet analytics and domain KPIs
-- Predictive categorization for maintenance and risk
