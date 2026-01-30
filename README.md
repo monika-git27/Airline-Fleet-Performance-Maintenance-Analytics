@@ -1,103 +1,132 @@
-# Airline Fleet Performance & Maintenance Analytics
-## Project Overview
+#  Airline Fleet Performance & Maintenance Analytics
 
-This project analyzes airline fleet data to assess fleet health, operational efficiency, maintenance risk, and retirement readiness.
-Using SQL for analysis and Power BI for visualization, the project converts raw aircraft data into structured, decision-ready insights to support maintenance prioritization and fleet planning.
+##  Project Overview
+Airlines operate complex fleets where aircraft age, fuel efficiency, maintenance risk, and spare-parts planning directly impact cost, safety, and operational reliability.
 
-## Objectives
+This project delivers an end-to-end data analytics solution to analyze airline fleet performance and support data-driven maintenance, retirement, and planning decisions.
 
-- Validate and structure aircraft fleet data for accurate analysis
+Using Python-based analysis and visualization, the project transforms raw fleet data into actionable insights through KPIs, forecasts, and an executive-style dashboard.
 
-- Analyze fleet composition, aircraft age, and performance efficiency
+---
 
-- Identify high-risk and maintenance-intensive aircraft
+##  Business Objectives
+The project aims to help airline stakeholders:
 
-- Classify aircraft into maintenance and retirement risk categories
+- Monitor fleet health and operational status
+- Identify high-risk and aging aircraft
+- Forecast spare parts demand
+- Support aircraft retirement and replacement planning
+- Improve fuel efficiency and maintenance cost control
+- Reduce operational complexity through fleet standardization insights
 
-- Present insights through an interactive Power BI dashboard
+---
 
-## Dataset Description
+##  Key Business Questions Addressed
+- How is the fleet distributed across age groups (new, mid-life, old)?
+- Which aircraft models contribute most to maintenance risk?
+- What is the spare parts demand by aircraft age and engine type?
+- Which aircraft are nearing retirement thresholds?
+- How fuel-efficient are different aircraft models?
+- What is the active vs retired vs under-maintenance fleet mix?
+- How complex is the fleet in terms of model and engine diversity?
+- Which aircraft require immediate vs near-term retirement?
+- How does aircraft age impact fuel inefficiency and maintenance demand?
 
-The dataset contains aircraft-level information including:
+## Project Structure
 
-- Airline
+**Airline-Fleet-Analytics/**
+-  `Data_clean_fleet.ipynb` – Data cleaning & preprocessing  
+-  `EDA_Fleet.ipynb` – Exploratory Data Analysis  
+-  `Data_Visualization_fleet.ipynb` – Visual analytics & charts  
+-  `Business Applications-Fleet.docx`
+-  `Dashboard Screenshot.png`
+-  `README.md`
 
-- Aircraft model
+## 🛠️ Tools & Technologies
 
-- Registration ID
+- **Python**
+  - Pandas – data manipulation & analysis  
+  - NumPy – numerical operations  
+  - Matplotlib – visualizations  
 
-- Year built
+- **Jupyter Notebook**
 
-- Seating capacity
+- **Power BI**
+  - Conceptual dashboard design  
 
-- Engine type
+- **Data Analytics Concepts**
+  - KPI analysis  
+  - EDA  
+  - Forecasting logic  
+  - Business-driven analytics  
 
-- Range (km)
 
-- Fuel burn (liters/hour)
+---
 
-- Operational status (Active / Retired)
+##  Project Workflow
 
-## Tools & Technologies
+### 1️. Data Cleaning & Preparation
+- Cleaned and standardized fleet data  
+- Handled missing values and inconsistencies  
+- Derived key metrics such as:
+  - Aircraft age  
+  - Fleet status  
+  - Fuel burn per seat  
+  - Risk classification  
 
-- SQL (PostgreSQL) – Data validation, aggregation, and analysis
+📓 **Notebook:** `Data_clean_fleet.ipynb`
 
-- Power BI – Interactive dashboards and KPI reporting
+---
 
-## Data Quality & Validation (SQL)
+### 2️. Exploratory Data Analysis (EDA)
+- Analyzed aircraft age distribution  
+- Evaluated fleet status mix  
+- Identified early signals of:
+  - Maintenance risk  
+  - Fuel inefficiency  
+  - Aging fleet segments  
 
-Before analysis, data quality checks were performed to ensure reliability:
+📓 **Notebook:** `EDA_Fleet.ipynb`
 
-- Duplicate aircraft detection using Registration_ID
+---
 
-- Missing value checks across key fields
+### 3️. Analytical Use Cases
+The following business applications were implemented:
 
-- Validation of build year ranges
+- Aircraft Age Group Classification  
+- Spare Parts Demand Forecast  
+- Fleet Standardization (Complexity Index)  
+- Aircraft Retirement Forecast  
+- Engine Reliability Risk by Age  
+- Spare Part Demand by Age Group  
+- Engine Type & Spare Part Planning  
+- Active vs Retired Fleet Transition  
+- Fuel Inefficiency & Maintenance Demand  
 
-- Detection of invalid numeric values (seats, range, fuel burn)
+📄 **Document:** `Business Applications-Fleet.docx`
 
-- Review of inconsistent status values
+---
 
-## Analytical Approach
-1️. Fleet Health & Composition
+### 4️. Data Visualization & Dashboard
+Built an executive-level dashboard to summarize insights:
 
-- Active vs Retired aircraft distribution
+####  Key KPIs
+- Total Aircraft  
+- Active Aircraft  
+- Average Fleet Age  
+- Average Fuel Burn per Seat  
+- High-Risk Aircraft Count  
 
-- Fleet breakdown by airline and aircraft model
+####  Visual Insights
+- Fleet count by aircraft model  
+- Fuel efficiency ranking  
+- Fleet status distribution  
+- Aircraft age distribution  
+- Spare parts demand categories  
+- Retirement forecast by aircraft model  
 
-2️. Aircraft Age & Lifecycle Analysis
-
-- Dynamic age calculation using build year
-
-- Classification into New, Mid-life, and Old aircraft
-
-3️. Performance & Efficiency Metrics
-
-- Fuel burn per seat for standardized efficiency comparison
-
-- Range efficiency (km per liter) to evaluate aircraft performance
-
-- Ranking of aircraft models by efficiency
-
-4️. Maintenance & Risk Assessment
-
-- Identification of 18 high-risk aircraft using age and fuel indicators
-
-- Classification into 3 spare-parts demand tiers (High / Medium / Low)
-
-- Engine-type distribution for maintenance planning
-
-5️. Retirement Readiness
-
-- Aircraft categorized into:
-
-- Immediate Retirement
-
-- Near Retirement
-
-- Active & Healthy
-
-## Power BI Dashboard
+ **Notebook:** `Data_Visualization_fleet.ipynb`  
+ ## Power BI Dashboard
 ![Fleet Performance Dashboard](https://github.com/monika-git27/Fleet-Analytics-Maintenance-Planning/blob/main/Dashboard.png)
 
 The Power BI dashboard provides:
@@ -119,29 +148,19 @@ The Power BI dashboard provides:
 - Status
 
 - Age group
+ 
 
-## Key Outcomes
+---
 
-- Established a clear fleet health baseline using validated data
+##  Key Insights & Impact
+- Identified high-risk aging aircraft requiring immediate attention  
+- Highlighted fuel-inefficient models impacting operating costs  
+- Enabled proactive spare-parts planning using age-based demand  
+- Supported data-driven retirement decisions  
+- Improved fleet visibility for maintenance and planning teams  
 
-- Identified 18 high-risk aircraft requiring closer maintenance review
 
-- Standardized performance comparison across aircraft models
 
-- Enabled targeted maintenance planning using 3 demand tiers
 
-- Delivered decision-ready insights through an interactive dashboard
-
-## Business Value
-
-This analysis helps airline stakeholders:
-
-- Prioritize maintenance efforts
-
-- Identify inefficient and aging aircraft
-
-- Support fleet renewal and retirement planning
-
-- Reduce reliance on manual analysis
 
 
