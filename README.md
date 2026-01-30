@@ -42,12 +42,12 @@ The project aims to help airline stakeholders:
 -  `Dashboard Screenshot.png`
 -  `README.md`
 
-## 🛠️ Tools & Technologies
+##  Tools & Technologies
 
 - **Python**
   - Pandas – data manipulation & analysis  
   - NumPy – numerical operations  
-  - Matplotlib – visualizations  
+  - Matplotlib, Seaborn – visualizations  
 
 - **Jupyter Notebook**
 
@@ -74,7 +74,7 @@ The project aims to help airline stakeholders:
   - Fuel burn per seat  
   - Risk classification  
 
-📓 **Notebook:** `Data_clean_fleet.ipynb`
+
 
 ---
 
@@ -86,7 +86,7 @@ The project aims to help airline stakeholders:
   - Fuel inefficiency  
   - Aging fleet segments  
 
-📓 **Notebook:** `EDA_Fleet.ipynb`
+
 
 ---
 
@@ -103,8 +103,7 @@ The following business applications were implemented:
 - Active vs Retired Fleet Transition  
 - Fuel Inefficiency & Maintenance Demand  
 
-📄 **Document:** `Business Applications-Fleet.docx`
-
+ 
 ---
 
 ### 4️. Data Visualization & Dashboard
@@ -125,7 +124,7 @@ Built an executive-level dashboard to summarize insights:
 - Spare parts demand categories  
 - Retirement forecast by aircraft model  
 
- **Notebook:** `Data_Visualization_fleet.ipynb`  
+
  ## Power BI Dashboard
 ![Fleet Performance Dashboard](https://github.com/monika-git27/Fleet-Analytics-Maintenance-Planning/blob/main/Dashboard.png)
 
